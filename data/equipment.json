@@ -1,0 +1,22 @@
+[
+	{
+		"_id": "ag3",
+		"name": "AG-3",
+		"type": "weapon",
+		"stats": {
+			"accuracy": 3,
+			"range": 3,
+			"damage": 2
+		}
+	},
+	{
+		"_id": "pistol",
+		"name": "Pistol",
+		"type": "weapon",
+		"stats": {
+			"accuracy": 2,
+			"range": 1,
+			"damage": 1
+		}
+	}
+]

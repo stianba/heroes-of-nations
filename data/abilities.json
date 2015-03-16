@@ -1,0 +1,13 @@
+[
+	{
+		"_id": "assault",
+		"name": "Assault",
+		"type": [
+			"attack"
+		],
+		"positions": [3, 4],
+		"targets": [1, 2],
+		"baseHitChance": 0.5,
+		"baseStrength": 5
+	}
+]
