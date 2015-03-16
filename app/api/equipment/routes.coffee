@@ -1,17 +1,18 @@
 'use strict'
 
 express = require 'express'
-controller = require './controller'
+EquipmentController = require './controller'
 
 router = express.Router()
+equipmentController = new EquipmentController()
 
 router.get '/', (req, res) ->
-  controller.index()
+  equipmentController.index()
     .then (data) ->
       res.json data
 
 router.get '/:id', (req, res) ->
-  controller.show(req.params.id)
+  equipmentController.show(req.params.id)
     .then (data) ->
       res.json data
 

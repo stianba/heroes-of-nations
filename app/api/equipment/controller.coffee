@@ -3,26 +3,32 @@
 fs = require 'fs'
 Deferred = require('promised-io/promise').Deferred
 
-exports.index = ->
-  deferred = new Deferred()
+class EquipmentController
+  constructor: ->
+    @dataFile = 'data/equipment.json'
 
-  fs.readFile 'data/equipment.json', (err, data) ->
-    deferred.resolve JSON.parse data
+  index: ->
+    deferred = new Deferred()
 
-  deferred.promise
+    fs.readFile @dataFile, (err, data) ->
+      deferred.resolve JSON.parse data
 
-exports.show = (id) ->
-  deferred = new Deferred()
+    deferred.promise
 
-  fs.readFile 'data/equipment.json', (err, data) ->
-    jsonData = JSON.parse data
+  show: (id) ->
+    deferred = new Deferred()
 
-    for equipment in jsonData
-      return deferred.resolve equipment if equipment._id is id.toLowerCase()
+    fs.readFile @dataFile, (err, data) ->
+      jsonData = JSON.parse data
 
-    deferred.resolve (
-      status: 404
-      message: "No equipment found."
-    )
+      for equipment in jsonData
+        return deferred.resolve equipment if equipment._id is id.toLowerCase()
 
-  deferred.promise
+      deferred.resolve (
+        status: 404
+        message: "No equipment found."
+      )
+
+    deferred.promise
+
+module.exports = EquipmentController
