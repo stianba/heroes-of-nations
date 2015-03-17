@@ -10,3 +10,9 @@ module.exports = (app) ->
 
   # Equipment
   app.use '/equipment', require './api/equipment/routes'
+
+  # Class
+  app.use '/class', require './api/class/routes'
+
+  # Hero
+  app.use '/hero', require './api/hero/routes'

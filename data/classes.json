@@ -1,0 +1,38 @@
+[
+	{
+		"_id": "national_guard",
+		"name": "National Guard",
+		"baseHP": 20,
+		"baseSkills": {
+			"defense": 2,
+			"shooting": 1,
+			"speed": 1
+		},
+		"baseTraits": [
+			"homesick"
+		],
+		"baseEquipment": [
+			{
+				"key": "enrollment_rifle",
+				"amount": 1
+			}
+		]
+	},
+	{
+		"_id": "infantry",
+		"name": "Infantry",
+		"baseHP": 30,
+		"baseSkills": {
+			"defense": 2,
+			"shooting": 2,
+			"speed": 2
+		},
+		"baseTraits": [],
+		"baseEquipment": [
+			{
+				"key": "m16",
+				"amount": 1
+			}
+		]
+	}
+]
