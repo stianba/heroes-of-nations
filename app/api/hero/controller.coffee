@@ -18,7 +18,18 @@ class HeroController
     deferred = new Deferred()
     hero = new Hero()
 
-    console.log body.moro
+    hero.class = body.class
+    hero.name = body.name
+    hero.nationality = body.nationality
+    hero.hp = body.hp
+    hero.skills = body.skills
+    hero.traits = body.traits
+    hero.abilities = body.abilities
+    hero.equipment = body.equipment
+
+    hero.save (err) ->
+      return deferred.resolve err if err
+      deferred.resolve hero
 
     deferred.promise
 
