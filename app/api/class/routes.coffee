@@ -7,12 +7,14 @@ router = express.Router()
 classesController = new ClassesController()
 
 router.get '/', (req, res) ->
-  classesController.index()
+  classesController
+    .index()
     .then (data) ->
       res.json data
 
 router.get '/:id', (req, res) ->
-  classesController.show(req.params.id)
+  classesController
+    .show(req.params.id)
     .then (data) ->
       res.json data
 

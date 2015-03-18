@@ -7,12 +7,26 @@ router = express.Router()
 heroController = new HeroController()
 
 router.get '/', (req, res) ->
-  heroController.index()
+  heroController
+    .index()
+    .then (data) ->
+      res.json data
+
+router.get '/:id', (req, res) ->
+  heroController
+    .show(req.params.id)
     .then (data) ->
       res.json data
 
 router.post '/', (req, res) ->
-  heroController.create(req.body)
+  heroController
+    .create(req.body)
+    .then (data) ->
+      res.json data
+
+router.delete '/:id', (req, res) ->
+  heroController
+    .destroy(req.params.id)
     .then (data) ->
       res.json data
 

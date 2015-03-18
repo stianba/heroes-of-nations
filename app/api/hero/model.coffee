@@ -4,8 +4,8 @@ mongoose = require 'mongoose'
 Schema = mongoose.Schema
 
 HeroSchema = new Schema
-  class: { type: String, ref: 'Class' }
   name: String
+  class: { type: String, ref: 'Class' }
   nationality: String
   HP: Number
   skills:
@@ -20,6 +20,7 @@ HeroSchema = new Schema
     {
       item: { type: String, ref: 'Equipment' }
       amount: Number
+      _id: false
     }
   ]
   ,

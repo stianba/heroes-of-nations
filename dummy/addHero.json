@@ -1,0 +1,24 @@
+{
+	"name": "Ola Hoggedal",
+	"class": "infantry",
+	"nationality": "NOR",
+	"hp": 75,
+	"skills": {
+		"defense": 3,
+		"shooting": 2,
+		"speed": 3
+	},
+	"traits": [
+		"quick",
+		"single_minded"
+	],
+	"abilities": [
+		"assault"
+	],
+	"equipment": [
+		{
+			"item": "ag3",
+			"amount": 1
+		}
+	]
+}
