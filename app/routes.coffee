@@ -16,3 +16,6 @@ module.exports = (app) ->
 
   # Hero
   app.use '/hero', require './api/hero/routes'
+
+  # Squad
+  app.use '/squad', require './api/squad/routes'
